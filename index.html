@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Sign-Up</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0;
+            background-color: rgb(243, 247, 251);
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        .odin {
+            background-color: black;
+            position: absolute;
+            bottom: 400px;
+            width: 488px;
+            height: 150px;
+            opacity: 0.5;
+        }
+
+        .odtext {
+            color: white;
+            font-size: 80px;
+            position: absolute;
+            bottom: 423px;
+            left: 185px;
+        }
+
+        .odimage {
+            position: absolute;
+            bottom: 413px;
+            left: 95px;
+        }
+
+        .motiv {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: -1.5px;
+            left: 600px;
+            position: absolute;
+            bottom: 550px;
+        }
+
+        .know {
+            bottom: 485px;
+        }
+
+        .field {
+            position: relative;
+            bottom: 413px;
+            left: 486px;
+            width: 1020px;
+            height: 250px;
+            border: none;
+            background-color: white;
+            box-shadow: 1px 1px 5px rgb(175, 175, 175);
+        }
+
+        .doth {
+            position: inherit;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: 570;
+            letter-spacing: -1px;
+            top: 30px;
+            left: 30px;
+        }
+
+        .round {
+            position: relative;
+            border-radius: 3px;
+            border: 1px solid #E5E7EB;
+            top: 50px;
+            width: 200px;
+            height: 20px;
+        }
+
+        .round:focus {
+            outline: none;
+            border: 1px solid blue;
+        }
+
+        .round:invalid {
+            border: 1px solid red;
+        }
+
+        .label {
+            position: relative;
+            font-size: 10px; 
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .n1 {
+            top: 45px;
+            left: 30px;
+        }
+
+        .n2 {
+            top: 10px;
+            left: 400px;
+        }
+
+        .n3 {
+            top: 40px;
+            left: 30px;
+        }
+
+        .n4 {
+            top: 5px;
+            left: 400px;
+        }
+
+        .n5 {
+            top: 40px;
+            left: 30px;
+        }
+
+        .n6 {
+            top: 5px;
+            left: 400px;
+        }
+
+        label, input{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .create {
+            position: absolute;
+            bottom: 80px;
+            left: 528px;
+            background-color: #596D48;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/halie-west-25xggax4bSA-unsplash.jpg"
+    width="488">
+    <div class="odin"></div>
+    <img class="odimage" src="images/odin-lined.png" width="90">
+    <div class="odtext">ODIN</div>
+    <div class="motiv">This is not a real online service! You know you need something <br>like this in your life to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.</div>
+    <div class="motiv know">You <em>know</em> you want to</div>
+    <fieldset class="field">
+        <legend class="doth">Lets do this!</legend>
+        <form id="signup" action="https://httpbin.org/post" method="post">
+            <label class="n1 label " for="first-name">FIRST NAME</label>
+            <input class="round n1" type="text" name="first-name" required>
+
+            <label class="n2 label" for="last-name">LAST NAME</label>
+            <input class="round n2" type="text" name="last-name" required>
+
+            <label class="n3 label" for="email">EMAIL</label>
+            <input class="round n3" type="email" name="email" required>
+
+            <label class="n4 label" for="phone">PHONE NUMBER</label>
+            <input class="round n4" type="number" name="phone" required>
+
+            <label class="n5 label" for="pwd">PASSWORD</label>
+            <input class="round n5" type="password" id="pwd" name="pwd" required>
+
+            <label class="n6 label" for="pwdcfm">CONFIRM PASSWORD</label>
+            <input class="round n6" type="password" id="pwdcfm" name="pwdcfm" required>
+        </form>
+    </fieldset>
+    <button type="submit" class="create" form="signup">CREATE ACCOUNT</button>
+</body>
+</html>
